@@ -3,3 +3,12 @@ https://en.wikipedia.org/wiki/Special:Random
 Here's an entry on using Wikipedia's API: https://www.mediawiki.org/wiki/API:Main_page
 
 To experiment: https://en.wikipedia.org/wiki/Special:ApiSandbox#action=query&titles=Main%20Page&prop=revisions&rvprop=content&format=jsonfm
+
+To open a page with the id: https://en.wikipedia.org/?curid=40098159
+
+The page info object:
+{pageid:714307
+size:60598
+snippet:"Time.   Created by Bill Finger and Bob Kane, the original Clayface (Basil <span class="searchmatch">Karlo</span>) was a B-list actor who began a life of crime using the identity of a villain"
+timestamp:"2017-11-24T02:43:26Z"
+title:"Clayface"}
