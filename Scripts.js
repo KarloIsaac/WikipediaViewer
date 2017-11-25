@@ -5,7 +5,7 @@ function openRandomArticleLink() {
 
 function retrieveJsonQueryResult(searchTerm) {
     var requestUrl = ("https://en.wikipedia.org/w/api.php?action=query" +
-            "&list=search&format=json&srlimit=500&origin=*&srsearch=");
+            "&list=search&format=json&srlimit=5&origin=*&srsearch=");
     requestUrl += encodeURIComponent(searchTerm);
     var jsonResponse = requestUrl;
     xmlHttpRequest = new XMLHttpRequest();
@@ -22,8 +22,28 @@ function retrieveJsonQueryResult(searchTerm) {
 
 
 function processResults(resultsArray) {
+    var body = document.getElementsByTagName("body")[0];
     for(i = 0 ; i < resultsArray.length ; i++) {
         pageInformation = resultsArray[i];
-        console.log(pageInformation.pageid);
+        resultFrame = buildResultFrame(pageInformation);
+        body.appendChild(resultFrame);
     }
+}
+
+
+function buildResultFrame(pageInformation) {
+    var pageLink = "https://en.wikipedia.org/?curid=" + pageInformation.pageid;
+
+    var titleSection = document.createElement("h2");
+    titleSection.innerHTML = pageInformation.title;
+
+    var informationSection = document.createElement("p");
+    informationSection.class = "information-section";
+    informationSection.innerHTML = pageInformation.snippet;
+
+    var resultFrame = document.createElement("div");
+    resultFrame.appendChild(titleSection);
+    resultFrame.appendChild(informationSection);
+    resultFrame.class = "result-frame";
+    return resultFrame;
 }
