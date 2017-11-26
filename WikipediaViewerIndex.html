@@ -3,12 +3,17 @@
 <head>
     <meta charset="utf-8">
     <script src="Scripts.js"></script>
+    <link rel="stylesheet" href="Styles.css">
     <title></title>
 </head>
 <body>
-    <button id="search-button" type="button" name="button" onclick="retrieveJsonQueryResult('karlo');">search</button>
+    <input id="search-input" type="text" name="" value="">
+    <button id="search-button" type="button" name="button" onclick="requestSearch();">
+        search
+    </button>
     <button id="random" type="button" title="Open a random article" onclick="openRandomArticleLink()">
         <img src="https://cdn2.iconfinder.com/data/icons/navigation-set-arrows-part-two/32/Shuffle-24.png" alt="Open Random Article">
     </button>
+    <div id="results-browser"></div>
 </body>
 </html>
