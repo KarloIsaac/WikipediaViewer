@@ -1,8 +1,40 @@
 .searchmatch {
-    color: red;
+    color: #ea0e59;
+    font-style:oblique
 }
 
+p {
+    margin: 0;
+    margin-top: 7px;
+    margin-bottom: 30px;
+}
 
-h2 {
-    color: green;
+h1 {
+    color: #3F51B5;
+    font-family: arial;
+}
+
+h3 {
+    color: #009670;
+    margin: 0px;
+}
+
+#results-browser {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    font-family:sans-serif;
+}
+
+#search-input {
+    font-size: x-large
+}
+
+#menu {
+    display: flex;
+    justify-content: flex-start;
+}
+
+#random {
+    margin-left: 10px;
 }

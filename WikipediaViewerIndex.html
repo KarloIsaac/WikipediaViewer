@@ -7,13 +7,16 @@
     <title></title>
 </head>
 <body>
-    <input id="search-input" type="text" name="" value="">
-    <button id="search-button" type="button" name="button" onclick="requestSearch();">
-        search
-    </button>
-    <button id="random" type="button" title="Open a random article" onclick="openRandomArticleLink()">
-        <img src="https://cdn2.iconfinder.com/data/icons/navigation-set-arrows-part-two/32/Shuffle-24.png" alt="Open Random Article">
-    </button>
+    <h1>Wikipedia Articles Finder</h1>
+    <div id="menu">
+        <input id="search-input" type="text" name="" value="">
+        <button id="search-button" type="button" title="search article" onclick="requestSearch();">
+            <img src="https://cdn2.iconfinder.com/data/icons/atrous/512/search_magnifying_glass_find-24.png" alt="search">
+        </button>
+        <button id="random" type="button" title="Open a random article" onclick="openRandomArticleLink()">
+            <img src="https://cdn2.iconfinder.com/data/icons/navigation-set-arrows-part-two/32/Shuffle-24.png" alt="Open Random Article">
+        </button>
+    </div>
     <div id="results-browser"></div>
 </body>
 </html>

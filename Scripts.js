@@ -42,7 +42,7 @@ function processResults(resultsArray) {
 
 
 function buildResultFrame(pageInformation) {
-    var titleSection = document.createElement("h2");
+    var titleSection = document.createElement("h3");
     titleSection.innerHTML = pageInformation.title + "&nbsp";
     titleSection.appendChild(buildAnchorElement(pageInformation.pageid));
 
